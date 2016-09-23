@@ -9,7 +9,6 @@ function getImages(subreddit) {
 	    		}
 	    	}
 	    	var image = new Image();
-	    	var isValid = false;
 	    	image.onerror = image.onabort = function() {
 	    		appendImage(item.data.url, false);
 	    	};
