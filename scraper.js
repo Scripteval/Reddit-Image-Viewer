@@ -1,5 +1,5 @@
 function getImages(subreddit) {
-	$.getJSON("http://www.reddit.com/r/" + subreddit + "/.json?jsonp=?", 
+	$.getJSON("https://www.reddit.com/r/" + subreddit + "/.json?jsonp=?", 
 	function(data) { 
 	    $.each(data.data.children, function(i,item){
 	    	//If image link is valid, run this function and append to page
