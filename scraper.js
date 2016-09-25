@@ -19,4 +19,16 @@ function getImages(subreddit) {
 	    });
 	});
 }
-window.onload = getImages("anime_irl");
+
+$(document).ready(function() {
+	$("#FormGroup1").submit(function(event) {
+		event.preventDefault();
+	});
+	$("#SubredditInput").keyup(function(event) {
+		console.log("test");
+		if (event.which == 13) {
+			$("#images img").remove();
+			getImages($("#SubredditInput").val());
+		} 
+	});
+});
