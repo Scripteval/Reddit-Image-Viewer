@@ -5,12 +5,10 @@ function getImages(subreddit) {
 	    	//If image link is valid, run this function and append to page
 	    	var appendImage = function(url, validUrl) {
 	    		if (validUrl) {
-	    			if (url.match("^http://")) {
-	    				url = url.replace("http://", "https://");
-	    			}
 	    			$("<img/>").attr("src", url).appendTo("#images");
 	    		}
 	    	}
+	    	item.data.url = item.data.url.replace(/^http:\/\//i, 'https://');   	
 	    	var image = new Image();
 	    	image.onerror = image.onabort = function() {
 	    		appendImage(item.data.url, false);
