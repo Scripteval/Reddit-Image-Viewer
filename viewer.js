@@ -5,6 +5,9 @@ function getImages(subreddit) {
 	    	//If image link is valid, run this function and append to page
 	    	var appendImage = function(url, validUrl) {
 	    		if (validUrl) {
+	    			if (!(url.match("^http://"))) {
+	    				url = url.replace("http://", "https://");
+	    			}
 	    			$("<img/>").attr("src", url).appendTo("#images");
 	    		}
 	    	}
