@@ -20,15 +20,16 @@ function getImages(subreddit) {
 	});
 }
 
+
 $(document).ready(function() {
+	var lastSubreddit = "";
 	$("#FormGroup1").submit(function(event) {
 		event.preventDefault();
-	});
-	$("#SubredditInput").keyup(function(event) {
-		console.log("test");
-		if (event.which == 13) {
+		var newInput = $("#SubredditInput").val();
+		if (lastSubreddit !== newInput) {
 			$("#images img").remove();
-			getImages($("#SubredditInput").val());
-		} 
+			getImages(newInput);
+			lastSubreddit = newInput;			
+		}
 	});
 });

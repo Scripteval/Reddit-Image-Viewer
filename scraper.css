@@ -6,8 +6,10 @@
 	-moz-column-count:    5;
 	-moz-column-gap:      0px;
 	column-count:         5;
-	column-gap:           0px;  
+	column-gap:           0px; 
+
 }
+
 #images img {
 	/*display:      block;*/
 	max-width:    100%;
@@ -24,6 +26,7 @@
   column-count:         4;
   }
 }
+
 @media (max-width: 1000px) {
   #images {
   -moz-column-count:    3;
@@ -31,6 +34,7 @@
   column-count:         3;
   }
 }
+
 @media (max-width: 800px) {
   #images {
   -moz-column-count:    2;
@@ -38,6 +42,7 @@
   column-count:         2;
   }
 }
+
 @media (max-width: 400px) {
   #images {
   -moz-column-count:    1;
@@ -45,6 +50,8 @@
   column-count:         1;
   }
 }
+
+.
 
 .form-group {
 	max-width: 50%;
